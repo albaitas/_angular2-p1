@@ -1,9 +1,18 @@
 import { Component } from "@angular/core";
 
 const todos = [
-    'Mokytis javaScript',
-    'Mokytis Angular 2',
-    'Sukurti svetainæ'
+    {
+        title: "Mokytis JavaScript",
+        completed: true
+    },
+    {
+        title: "Mokytis Angular 2",
+        completed: false
+    },
+    {
+        title: "Sukurti svetaine",
+        completed: false
+    }
 ];
 
 @Component({
