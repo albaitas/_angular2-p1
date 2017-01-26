@@ -4,7 +4,7 @@
     </header>
     <main>
         <section class = "todo-list" *ngIf = "todos.length">  <!-- "todos.length >0" -->
-               <div class = "todo-item" *ngFor = "let todo of todos" [ngClass]="{'completed': todo.completed}">
+               <div class = "todo-item" *ngFor = "let todo of todos" [class.completed]="todo.completed">
                    <button class = "checkbox icon">
                     <i class = "material-icons" [innerText] = "todo.completed ?'check_box':'check_box_outline_blank'"></i>
                    </button>
