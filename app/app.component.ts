@@ -1,6 +1,10 @@
 import { Component } from "@angular/core";
 
-const todos = [
+class Todo{
+    constructor(public title: string,
+                public completed: boolean = false){}
+}
+const todos: Todo[] = [
     {
         title: "Mokytis JavaScript",
         completed: true
@@ -24,14 +28,21 @@ const todos = [
 })
 
 export class AppComponent {
-    title = "Angular 2";
-    todos = todos;
+    title: string = "Angular 2";
+    todos: Todo[] = todos;
 
-    toggle(todo: any){
+    create(title: string){
+
+        let todo: Todo = new Todo(title);
+
+        this.todos.push(todo);
+    }
+
+    toggle(todo: Todo){
         todo.completed = !todo.completed;
     }
 
-    delete(todo: any){
+    delete(todo: Todo){
         let index = this.todos.indexOf(todo);
         if(index > -1){
             this.todos.splice(index, 1);

@@ -3,10 +3,15 @@
         <h1>{{title}}</h1>
     </header>
     <main>
-        <section class = "todo-list" *ngIf = "todos.length">  <!-- "todos.length >0" -->
-               <div class = "todo-item" *ngFor = "let todo of todos" [class.completed]="todo.completed">
+        <form class = "todo-form" (submit) = "create(titleInput.value)">
+            <input type = "text" placeholder = "Ka reikia daryti" #titleInput>
+            <button type = "submit">Prideti</button>
+        </form>
+
+        <section class = "todo-list" *ngIf="todos.length">
+               <div class = "todo-item" *ngFor="let todo of todos" [class.completed]="todo.completed">
                    <button class = "checkbox icon" (click)="toggle(todo)">
-                    <i class = "material-icons" [innerText] = "todo.completed ?'check_box':'check_box_outline_blank'"></i>
+                    <i class = "material-icons">{{todo.completed ?'check_box':'check_box_outline_blank'}}</i>
                    </button>
                    <span class = "title">{{todo.title}}</span>
                    <div class="actions">
