@@ -26,4 +26,8 @@ const todos = [
 export class AppComponent {
     title = "Angular 2";
     todos = todos;
+
+    toggle(todo: any){
+        todo.completed = !todo.completed;
+    }
 }
