@@ -31,8 +31,8 @@ export class AppComponent {
     title: string = "Angular 2";
     todos: Todo[] = todos;
 
-    create(title: string){
-
+    create(event, title: string){
+      event.preventDefault();
         let todo: Todo = new Todo(title);
 
         this.todos.push(todo);
