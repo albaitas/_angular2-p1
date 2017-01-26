@@ -31,12 +31,12 @@ export class AppComponent {
     title: string = "Angular 2";
     todos: Todo[] = todos;
 
-    create(event, input: HTMLInputElement){
+    create(event, title: string){
       event.preventDefault();
-        let todo: Todo = new Todo(input.value);
+        let todo: Todo = new Todo(title);
 
         this.todos.push(todo);
-        input.value = "";
+
     }
 
     toggle(todo: Todo){
