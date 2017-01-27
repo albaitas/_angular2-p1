@@ -30,6 +30,7 @@ const todos: Todo[] = [
 export class AppComponent {
     title: string = "Angular 2";
     todos: Todo[] = todos;
+    newTodoTitle: string = '';
 
     create(event, title: string){
       event.preventDefault();

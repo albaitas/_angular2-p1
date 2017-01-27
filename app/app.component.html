@@ -4,7 +4,7 @@
     </header>
     <main>
         <form class = "todo-form" (submit) = "create($event, titleInput.value); titleInput.value=''">
-            <input type = "text" placeholder = "Ka reikia daryti" #titleInput>
+            <input type = "text"  placeholder = "Ka reikia daryti" required>
             <button type = "submit">Prideti</button>
         </form>
 
