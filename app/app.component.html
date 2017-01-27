@@ -4,7 +4,8 @@
     </header>
     <main>
         <form class = "todo-form" (submit) = "create($event, titleInput.value); titleInput.value=''">
-            <input type = "text"  placeholder = "Ka reikia daryti" required>
+            <input type = "text" name ="title" [(ngModel)]="newTodoTitle" placeholder = "Ka reikia daryti"
+                   required>{{newTodoTitle}}
             <button type = "submit">Prideti</button>
         </form>
 
