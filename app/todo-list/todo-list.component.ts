@@ -11,11 +11,8 @@ import { TodoService } from "../shared/todo.service";
 })
 export class TodoListComponent{
     @Input() todos: Todo[];
-    todoService: TodoService;
 
-    constructor(todoService: TodoService){
-        this.todoService = todoService;
-    }
+    constructor(private todoService: TodoService){}
 
     delete(todo: Todo){
         console.log("delete");
