@@ -3,7 +3,7 @@
         <h1>{{title}}</h1>
     </header>
     <main>
-        <todo-form></todo-form>
+        <todo-form (add)="create($event)"></todo-form>
 
         <todo-list></todo-list>
     </main>

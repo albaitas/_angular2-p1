@@ -1,5 +1,5 @@
-<form class = "todo-form" (ngSubmit) = "create(); todoForm.reset()" #todoForm="ngForm">
-            <input type = "text" name ="title" [(ngModel)]="newTodoTitle" placeholder = "Ka reikia daryti"
+<form class = "todo-form" (ngSubmit) = "onSubmit(); todoForm.reset()" #todoForm="ngForm">
+            <input type = "text" name ="title" [(ngModel)]="title" placeholder = "Ka reikia daryti"
                    required>
             <button type = "submit" [disabled]="todoForm.form.invalid">Prideti</button>
 </form>
