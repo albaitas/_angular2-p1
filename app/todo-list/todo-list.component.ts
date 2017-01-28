@@ -16,6 +16,7 @@ export class TodoListComponent{
     }
 
     delete(todo: Todo){
+        console.log("delete");
         let index = this.todos.indexOf(todo);
         if(index > -1){
             this.todos.splice(index, 1);
