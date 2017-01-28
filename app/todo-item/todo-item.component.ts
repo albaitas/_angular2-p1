@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Todo } from "../shared/todo";
 
 @Component({
@@ -8,5 +8,5 @@ import { Todo } from "../shared/todo";
     styleUrls: ["todo-item.component.css"]
 })
 export class TodoItemComponent{
-     todo: Todo = new Todo("jonas");
+     @Input() todo: Todo;
 }
