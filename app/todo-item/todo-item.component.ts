@@ -15,6 +15,6 @@ export class TodoItemComponent{
         this.todo.completed = !this.todo.completed;
     }
     onDelete(){
-        this.delete.emit();
+        this.delete.emit(this.todo);
     }
 }
