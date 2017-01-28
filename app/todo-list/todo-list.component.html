@@ -1,3 +1,3 @@
 <div class = "todo-list" *ngIf="todos.length">
-     <todo-item *ngFor="let todo of todos" [todo]="todo" (delete)="delete()"></todo-item>
+     <todo-item *ngFor="let todo of todos" [todo]="todo" (delete)="delete(todo)"></todo-item>
 </div>
