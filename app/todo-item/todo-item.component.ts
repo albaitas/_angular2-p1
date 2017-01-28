@@ -9,4 +9,8 @@ import { Todo } from "../shared/todo";
 })
 export class TodoItemComponent{
      @Input() todo: Todo;
+
+    toggle(){
+        this.todo.completed = !this.todo.completed;
+    }
 }
